@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Playsmart Kidz — Fun Learning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">PK</div>
+      <div class="brand-text">
+        <h1>Playsmart Kidz</h1>
+        <p class="tag">Fun • Learning • Creativity</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#videos">Videos</a>
+      <a href="#shorts">Popular Shorts</a>
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#characters">Characters</a>
+      <a href="#follow">Follow</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Welcome to Playsmart Kidz 🎈</h2>
+        <p class="muted">Short, safe, and super-fun videos and activities for little learners.</p>
+        <div class="hero-actions">
+          <button onclick="document.getElementById('videos').scrollIntoView({behavior:'smooth'})">Watch Videos</button>
+          <button onclick="openSubscribe()">Subscribe</button>
+        </div>
+      </div>
+      <div class="hero-right card">
+        <img src="https://via.placeholder.com/480x270?text=Playsmart+Kidz+Hero" alt="hero">
+        <div class="muted small">Latest Short</div>
+      </div>
+    </section>
+
+    <!-- LATEST VIDEOS (1) -->
+    <section id="videos" class="section card">
+      <h3>Latest Videos</h3>
+      <div class="grid videos-grid" id="videos-grid">
+        <!-- Filled by script.js -->
+      </div>
+    </section>
+
+    <!-- POPULAR SHORTS (2) -->
+    <section id="shorts" class="section card">
+      <h3>Popular Shorts</h3>
+      <div class="shorts-row" id="shorts-row">
+        <!-- Filled by script.js -->
+      </div>
+    </section>
+
+    <!-- ABOUT (3) -->
+    <section id="about" class="section card">
+      <h3>About Playsmart Kidz</h3>
+      <p>Playsmart Kidz makes bite-sized learning videos in Hindi & English — colors, numbers, alphabets, stories and creative play. Safe for kids and fun for the whole family.</p>
+      <ul>
+        <li>Short videos (30–90 sec)</li>
+        <li>Parent-friendly content</li>
+        <li>Interactive games & quizzes</li>
+      </ul>
+    </section>
+
+    <!-- GAMES (4) -->
+    <section id="games" class="section card">
+      <h3>Kids Activities & Games</h3>
+      <div class="flex-row">
+        <div class="game-block">
+          <h4>Number Guess</h4>
+          <p class="muted">Guess a number from 1 to 10 and win stars!</p>
+          <div id="number-game"></div>
+        </div>
+        <div class="game-block">
+          <h4>Color Clicker</h4>
+          <p class="muted">Click a color to hear its name and earn points.</p>
+          <div id="color-palette" class="color-palette"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTERS (8) -->
+    <section id="characters" class="section card">
+      <h3>Our Cartoon Characters</h3>
+      <div class="grid chars-grid" id="chars-grid">
+        <!-- Filled by script.js -->
+      </div>
+    </section>
+
+    <!-- FOLLOW US (10) -->
+    <section id="follow" class="section card follow-card">
+      <h3>Follow Playsmart Kidz</h3>
+      <p class="muted">Subscribe and follow on social media to get latest shorts and activities.</p>
+      <div class="socials">
+        <a href="#" class="social youtube">YouTube</a>
+        <a href="#" class="social instagram">Instagram</a>
+        <a href="#" class="social tiktok">TikTok</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Playsmart Kidz • Made with ❤️</div>
+    <div class="muted">Points saved locally • Safe for kids</div>
+  </footer>
+
+  <!-- Subscribe modal -->
+  <div id="subscribeModal" class="modal hidden">
+    <div class="modal-card card">
+      <h4>Subscribe to Playsmart Kidz</h4>
+      <input id="subEmail" type="email" placeholder="Enter email" />
+      <div class="modal-actions">
+        <button onclick="saveSubscribe()">Subscribe</button>
+        <button onclick="closeSubscribe()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

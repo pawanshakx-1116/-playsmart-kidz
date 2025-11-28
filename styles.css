@@ -1,0 +1,79 @@
+/* Playsmart Kidz - Combined Playful + Minimal Cute Theme */
+/* Color palette: blue, yellow, pink, purple, light blue, soft green */
+
+:root{
+  --bg: #f3fbff;
+  --card: #ffffff;
+  --blue: #3b82f6;
+  --yellow: #ffb703;
+  --pink: #ff6b9a;
+  --purple: #8b5cf6;
+  --light: #c7f0ff;
+  --green: #7ad29f;
+  --muted: #6b7280;
+  --text: #052036;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(4,9,20,0.06);
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:linear-gradient(90deg,var(--yellow),var(--pink));color:#052036;position:sticky;top:0;z-index:40}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--text);box-shadow:var(--shadow)}
+.brand-text h1{margin:0;font-size:18px}
+.tag{margin:0;color:var(--muted);font-size:13px}
+
+/* nav */
+.nav a{color:inherit;text-decoration:none;margin-left:14px;font-weight:700}
+.nav a:hover{text-decoration:underline}
+
+/* layout */
+main{max-width:1100px;margin:18px auto;padding:0 16px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:12px}
+
+/* hero */
+.hero{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.hero-left{flex:1}
+.hero-right{width:420px}
+.hero h2{font-size:28px;margin:0}
+.muted{color:var(--muted)}
+
+/* buttons */
+button{background:var(--blue);color:white;border:0;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
+button:hover{opacity:0.95}
+
+/* grids */
+.grid{display:grid;gap:12px}
+.videos-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));display:grid}
+.shorts-row{display:flex;gap:12px;overflow:auto;padding-bottom:6px}
+.chars-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));display:grid}
+
+/* games */
+.flex-row{display:flex;gap:12px;flex-wrap:wrap}
+.game-block{flex:1;min-width:220px}
+
+/* colors */
+.color-palette{display:flex;gap:8px;flex-wrap:wrap}
+.color-swatch{width:72px;height:72px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;cursor:pointer;box-shadow:0 6px 14px rgba(2,6,23,0.08)}
+
+/* socials */
+.socials{display:flex;gap:8px;margin-top:8px}
+.social{padding:10px 12px;border-radius:10px;color:white;text-decoration:none;font-weight:800}
+.social.youtube{background:#ff0000}
+.social.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+.social.tiktok{background:#010101}
+
+/* footer */
+.site-footer{margin:20px auto;padding:14px;text-align:center;color:var(--muted)}
+
+/* modal */
+.modal{position:fixed;right:20px;bottom:20px;z-index:60}
+.hidden{display:none}
+
+/* responsive */
+@media(max-width:880px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .nav{display:none}
+}
